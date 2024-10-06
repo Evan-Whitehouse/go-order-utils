@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"testing"
 
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/model"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/polymarket/go-order-utils/pkg/model"
 	"github.com/stretchr/testify/assert"
 )
 

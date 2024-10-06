@@ -1,9 +1,9 @@
 package builder
 
 import (
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/eip712"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/polymarket/go-order-utils/pkg/eip712"
 )
 
 var (

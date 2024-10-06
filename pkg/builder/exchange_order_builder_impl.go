@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/eip712"
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/model"
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/signer"
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/utils"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/polymarket/go-order-utils/pkg/eip712"
-	"github.com/polymarket/go-order-utils/pkg/model"
-	"github.com/polymarket/go-order-utils/pkg/signer"
-	"github.com/polymarket/go-order-utils/pkg/utils"
 )
 
 type ExchangeOrderBuilderImpl struct {

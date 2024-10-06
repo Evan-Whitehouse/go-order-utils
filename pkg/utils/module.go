@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/config"
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/model"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/polymarket/go-order-utils/pkg/config"
-	"github.com/polymarket/go-order-utils/pkg/model"
 )
 
 func GetVerifyingContractAddress(chainId *big.Int, contract model.VerifyingContract) (common.Address, error) {
