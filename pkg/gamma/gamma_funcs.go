@@ -1,11 +1,14 @@
 package gamma
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"net/url"
+
+	ds "github.com/Evan-Whitehouse/go-order-utils/pkg/datastructures"
 )
 
 const (
@@ -14,7 +17,7 @@ const (
 	Events  = "events"
 )
 
-func GetAllEvents() string {
+func GetAllEvents() []ds.Event {
 	// Get all events that can be traded on Polymarket
 	url := fmt.Sprintf("%s/%s", BaseUrl, Events)
 
@@ -37,7 +40,13 @@ func GetAllEvents() string {
 		log.Fatal(err)
 	}
 
-	return string(body)
+	var events []ds.Event
+	err = json.Unmarshal(body, &events)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return events
 }
 
 func addQueries(baseUrl string, queries map[string]string) string {
