@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Evan-Whitehouse/go-order-utils/gamma"
+	"github.com/Evan-Whitehouse/go-order-utils/pkg/gamma"
 )
 
 // test get all events
